@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './index.module.less';
 import { LayoutOutlined, FormOutlined } from '@ant-design/icons';
-import { Routes, Route, NavLink, Navigate } from "react-router-dom";
+import {render as renderAmis} from 'amis';
+import {ToastComponent, AlertComponent, alert, confirm, toast} from 'amis-ui';
+
 
 type RendererState = {
 

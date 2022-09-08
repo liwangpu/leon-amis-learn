@@ -7,7 +7,7 @@ type EditorState = {
 
 }
 
-export default class Editor extends React.Component<EditorState> {
+export default class Editor extends React.Component<any, EditorState> {
 
   constructor(props: EditorState) {
     super(props);
@@ -16,7 +16,7 @@ export default class Editor extends React.Component<EditorState> {
   render(): React.ReactNode {
     return (
       <div className={styles.App}>
-        
+
       </div>
     );
   }
