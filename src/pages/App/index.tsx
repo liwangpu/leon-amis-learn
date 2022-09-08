@@ -20,20 +20,20 @@ export default class App extends React.Component<AppState> {
       <div className='tutorial-app'>
         <div className="navs">
           <p className="title">Amis学习</p>
-          <NavLink to="editor" className="item">
-            <FileOutlined className='icon' />
-            <p>设计器</p>
-          </NavLink >
           <NavLink to="renderer" className="item">
             <FileOutlined className='icon' />
             <p>运行时</p>
+          </NavLink >
+          <NavLink to="editor" className="item">
+            <FileOutlined className='icon' />
+            <p>设计器</p>
           </NavLink >
         </div>
         <div className="page">
           <Routes>
             <Route path="/editor" element={<Editor />} />
             <Route path="/renderer" element={<Renderer />} />
-            <Route path="*" element={<Navigate to="/editor" replace />} />
+            <Route path="*" element={<Navigate to="/renderer" replace />} />
           </Routes>
         </div>
       </div>
