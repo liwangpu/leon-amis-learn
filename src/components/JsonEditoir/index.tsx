@@ -28,7 +28,7 @@ export default class JsonEditor extends React.Component<JsonEditorProps> {
       }
     };
     this.editor = new JSONEditor(this.editorContainer.current, options);
-    this.editor.set(this.props.value)
+    this.editor.set(this.props.value);
   }
 
   render(): React.ReactNode {
