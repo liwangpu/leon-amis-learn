@@ -2,9 +2,6 @@ import React from 'react';
 import styles from './index.module.less';
 import JsonEditoir from '../../components/JsonEditoir';
 import AmisRenderer from '../../components/AmisRenderer';
-import { LayoutOutlined, FormOutlined } from '@ant-design/icons';
-import { render as renderAmis } from 'amis';
-import { ToastComponent, AlertComponent, alert, confirm, toast } from 'amis-ui';
 import { Bind } from 'lodash-decorators';
 
 const prefix: string = 'renderer';
@@ -38,7 +35,6 @@ export default class Renderer extends React.Component<any, RendererState> {
 
   @Bind()
   onSchemaChange(schema: any): void {
-    // console.log(`cc:`, config);
     this.setState({ schema });
   }
 
@@ -49,7 +45,7 @@ export default class Renderer extends React.Component<any, RendererState> {
           <JsonEditoir value={this.state.schema} onChange={this.onSchemaChange} />
         </div>
         <div className={styles['page']}>
-          <AmisRenderer value={this.state.schema} />
+          <AmisRenderer schema={this.state.schema} />
         </div>
       </div>
     );

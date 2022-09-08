@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './index.module.less';
+import { render as renderAmis } from 'amis';
+import { ToastComponent, AlertComponent, alert, confirm, toast } from 'amis-ui';
 
 const prefix: string = 'amis-renderer';
 
 type AmisRendererProps = {
-  value: any;
-  // onChange: (val: any) => void;
+  schema: any;
 };
 
 export default class AmisRenderer extends React.Component<AmisRendererProps> {
@@ -15,13 +16,13 @@ export default class AmisRenderer extends React.Component<AmisRendererProps> {
   }
 
   componentDidMount(): void {
-
+    console.log(`schema:`, this.props.schema);
   }
 
   render(): React.ReactNode {
     return (
       <div className={styles[prefix]}>
-
+        {renderAmis(this.props.schema)}
       </div>
     );
   }

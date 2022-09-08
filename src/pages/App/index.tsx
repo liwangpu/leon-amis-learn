@@ -22,11 +22,11 @@ export default class App extends React.Component<AppState> {
           <p className="title">Amis学习</p>
           <NavLink to="renderer" className="item">
             <FileOutlined className='icon' />
-            <p>运行时</p>
+            <p>引擎运行时</p>
           </NavLink >
           <NavLink to="editor" className="item">
             <FileOutlined className='icon' />
-            <p>设计器</p>
+            <p>引擎设计器</p>
           </NavLink >
         </div>
         <div className="page">
