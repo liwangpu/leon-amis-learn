@@ -5,23 +5,14 @@ import { Renderer } from 'amis-core';
 
 const prefix: string = 'my-input';
 
-type JsonEditorProps = {
-  value: any;
-  onChange: (val: any) => void;
-};
-
-@Renderer((() => {
-  // console.log(`dddd:`,);
-  // debugger;
-  return {
-    type: 'my-input'
-  };
-})())
+@Renderer({
+  type: 'my-input'
+})
 export default class MyInput extends React.Component<any> {
 
   constructor(props: any) {
     super(props);
-    console.log(`my input props:`, props);
+    // console.log(`my input props:`, props);
   }
 
   componentDidMount(): void {
