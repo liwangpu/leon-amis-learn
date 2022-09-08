@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.less';
 import 'antd/dist/antd.less';
+import 'amis/lib/themes/cxd.css';
+import 'amis/lib/helper.css';
+import 'amis/sdk/iconfont.css';
 import App from './pages/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
@@ -11,9 +14,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   // <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
   // </React.StrictMode>
 );
 

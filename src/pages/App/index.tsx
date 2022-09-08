@@ -2,8 +2,8 @@ import React from 'react';
 import './index.less';
 import { FileOutlined, FormOutlined } from '@ant-design/icons';
 import { Routes, Route, NavLink, Navigate } from "react-router-dom";
-import HookLearn from '../HookLearn';
-import DynamicTest from '../DynamicTest';
+import Editor from '../Editor';
+import Renderer from '../Renderer';
 
 type AppState = {
 
@@ -19,21 +19,21 @@ export default class App extends React.Component<AppState> {
     return (
       <div className='tutorial-app'>
         <div className="navs">
-          <p className="title">React学习</p>
-          <NavLink to="dynamic-test" className="item">
+          <p className="title">Amis学习</p>
+          <NavLink to="editor" className="item">
             <FileOutlined className='icon' />
-            <p>动态组件</p>
+            <p>设计器</p>
           </NavLink >
-          <NavLink to="hooks" className="item">
+          <NavLink to="renderer" className="item">
             <FileOutlined className='icon' />
-            <p>Hook</p>
+            <p>运行时</p>
           </NavLink >
         </div>
         <div className="page">
           <Routes>
-            <Route path="/hooks" element={<HookLearn />} />
-            <Route path="/dynamic-test" element={<DynamicTest />} />
-            <Route path="*" element={<Navigate to="/dynamic-test" replace />} />
+            <Route path="/editor" element={<Editor />} />
+            <Route path="/renderer" element={<Renderer />} />
+            <Route path="*" element={<Navigate to="/editor" replace />} />
           </Routes>
         </div>
       </div>

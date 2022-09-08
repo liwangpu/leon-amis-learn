@@ -3,20 +3,20 @@ import styles from './index.module.less';
 import { LayoutOutlined, FormOutlined } from '@ant-design/icons';
 import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 
-type HookLearnState = {
+type RendererState = {
 
 }
 
-export default class HookLearn extends React.Component<HookLearnState> {
+export default class Renderer extends React.Component<any, RendererState> {
 
-  constructor(props: HookLearnState) {
+  constructor(props: RendererState) {
     super(props);
   }
 
   render(): React.ReactNode {
     return (
       <div className={styles.App}>
-        hook
+
       </div>
     );
   }
