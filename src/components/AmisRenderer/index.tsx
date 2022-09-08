@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './index.module.less';
 import { render as renderAmis } from 'amis';
-import MyInput from '../MyInput';
+import '../MyInput';
 
 const prefix: string = 'amis-renderer';
-
-let c = MyInput;
 
 type AmisRendererProps = {
   schema: any;
